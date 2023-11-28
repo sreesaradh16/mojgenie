@@ -26,7 +26,7 @@
                     @foreach($statements as $statement)
                     <tbody class="table-tbody">
                         <tr>
-                            <td class="sort-date" data-date="1546016360">{{ $statement->created_at}}</td>
+                            <td class="sort-date" data-date="1546016360">{{ Carbon\Carbon::parse($statement->created_at)->format('d-m-Y') }} <br>{{ Carbon\Carbon::parse($statement->created_at)->format('g:i A') }}</td>
                             <td class="sort-name">{{ $statement->amount }}</td>
                             <td class="sort-name">{{ $statement->type }}</td>
                             <td class="sort-name">{{ $statement->details }}</td>
